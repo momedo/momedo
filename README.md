@@ -392,7 +392,9 @@ Der Server ist sehr leicht administrierbar. Es ist lediglich auf der IP der host
 Die Einfachheit der Administrierbarkeit des Servers bietet sehr große Chancen auf eine Nutzung auch von anderen Zielgruppen, wie von Informatik-Lehrern, die für eine Klasse oder Schule einen kommunalen Messenger anbieten möchten.
 
 
-*Screenshot der Serversoftware in Java*
+*Screenshot der Serversoftware in Java
+![Screenshot der Serversoftware in Java](/readme_images/smokestack.png)
+![Screenshot der Serversoftware in Java](/readme_images/smoke_neighbor.png)
 
 
 Die Abbildungen zeigen einmal die Android Java Anwendung für den Server SmokeStack und die Verbindung aufgebaut vom Klienten Smoke zum Listener der Servers.
