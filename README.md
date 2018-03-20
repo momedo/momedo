@@ -571,7 +571,7 @@ Schneier, Bruce / Seidel, Kathleen / Vijayakumar, Saranya: A Worldwide Survey of
 
 Smoltczyk, Maja: Datenschutzmängel bei Nutzung von Whatsapp an Schulen - Tätigkeitsbericht der Berliner Datenschutzbeauftragten 2016, URL: https://www.datenschutz-berlin.de/, zit. nach: Schulzki-Haddouti, Christiane: Datenschutzbeauftragte sieht schwere Datenschutzmängel bei Nutzung von Whatsapp an Schulen, URL: https://www.heise.de/newsticker/meldung/Datenschutzbeauftragte-sieht-schwere-Datenschutzmaengel-im-Berliner-Gesundheitswesen-3678056.html, 07.04.2017
 
-Smoke: Documentation of the Android Messenger Application Smoke with Encryption, URL: https://github.com/textbrowser/smoke/raw/master/Documentation/Smoke.pdf
+Smoke: Documentation of the Android Messenger Application Smoke with Encryption, URL: https://github.com/textbrowser/smoke/raw/master/Documentation/Smoke.pdf , 2017
 
 SVZ: Mangelnde Aufklärung : Lehrer sollten Whatsapp und Co. nicht für Klassenchat nutzen, URL: https://www.svz.de/18100191, 18.10.2017.
 
