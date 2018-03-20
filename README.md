@@ -498,7 +498,7 @@ Die Benutzeroberfläche ist derzeit noch nicht in eigene Seiten pro Teilnehmer g
 
 
 *Screenshot der Benutzeroberfläche*
-
+![Screenshot der Benutzeroberfläche](/readme_images/smoke_current_chat_gui.png)
 
 Die Benutzeroberfläche ist derzeit im IRC-Stile und zeigt sämtliche Nachrichten auf einer Seite an.
 Hier ist die Anpassung vorzunehmen, dass für jeden Nutzer eine eigene Message-Historie aufgebaut wird.
