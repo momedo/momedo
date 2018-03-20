@@ -29,6 +29,10 @@
 7 Literaturverzeichnis
 ```
 
+```
+Bibliographischer Verweis:
+Momedo: Open Source Mobiler Messenger für kommunale und schulische Zwecke mit Verschlüsselung, Github, URL: https://github.com/momedo/momedo/blob/master/README.md , 2018
+```
 
 
 ## 1 Ausgangslage
@@ -566,6 +570,8 @@ Iseninfos: DGSVO: WhatsApp auf Firmenhandy nicht mehr erlaubt, URL: http://www.i
 Landesbeauftragte für den Datenschutz Niedersachsen: Merkblatt für die Nutzung von „WhatsApp“ in Schulen, URL: tps://www.lfd.niedersachsen.de/download/124022/Merkblatt_fuer_die_Nutzung_von_WhatsApp_in_Schulen.pdf, 19.10.2017.
 
 Greis, Friedhelm: Strafe verhängt: Diese Nutzerdaten teilt Whatsapp weiterhin mit Facebook, https://www.golem.de/news/strafe-verhaengt-diese-nutzerdaten-teilt-whatsapp-weiterhin-mit-facebook-1803-133372.html, 16.03.2018
+
+Momedo: Open Source Mobiler Messenger für kommunale und schulische Zwecke mit Verschlüsselung, Github, URL: https://github.com/momedo/momedo/blob/master/README.md , 2018
 
 Schneier, Bruce / Seidel, Kathleen / Vijayakumar, Saranya: A Worldwide Survey of Encryption Products, February 11, 2016 Version 1.0., zit. nach Adams, David / Maier, Ann-Kathrin (2016): BIG SEVEN Study, open source crypto-messengers to be compared - or: Comprehensive Confidentiality Review & Audit of GoldBug, Encrypting E-Mail-Client & Secure Instant Messenger, Descriptions, tests and analysis reviews of 20 functions of the application based on the essential fields and methods of evaluation of the 8 major international audit manuals for IT security investigations including 38 figures and 87 tables, URL: https://sf.net/projects/goldbug/files/bigseven-crypto-audit.pdf - English / German Language, Version 1.1, 305 pages, June 2016
 
