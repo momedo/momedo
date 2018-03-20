@@ -488,6 +488,7 @@ Smoke hat mit dem Server SmokeStack einen Schlüssel-Server bereits integriert u
 Ein Symbol zeigt in der Teilnehmerliste den erfolgreichen Schlüsselaustausch der Teilnehmer an.
 
 *Screenshot erfolgreicher Schlüsselaustausch / Teilnehmerliste*
+![Screenshot erfolgreicher Schlüsselaustausch / Teilnehmerliste](/readme_images/smoke_participants.png)
 
 
 Die Teilnehmerliste in Smoke Messenger besteht aus Teilnehmer und Sip-Hash-Kennung.
