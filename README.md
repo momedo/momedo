@@ -442,7 +442,7 @@ Das Verschlüsselungsverfahren setzt standardmäßig auf eine Infrastruktur aus 
 
 
 *Screenshot der Verschlüsselungsinformation Key und Signatur*
-
+![Screenshot der Verschlüsselungsinformation Key und Signatur](/readme_images/smoke_encryption_key.png)
 
 Die Verschlüsselungsdaten werden ausgewiesen und hier der Fingerprint des öffentlichen Schlüssels dargestellt.
 Für den Nutzer kann diese zusätzliche Darstellung z.B. in angepassten Kompilierungen verborgen werden.
