@@ -286,6 +286,7 @@ Smoke Chat:
 Mobile, quelloffene und verschlüsselnde Chat Applikation für Android
 Repositorium: https://github.com/textbrowser/smoke
 Projektseite: https://textbrowser.github.io/smoke/
+Manual: https://github.com/textbrowser/smoke/raw/master/Documentation/Smoke.pdf
 Serversoftware ist die einfach zu administrierende Software SmokeStack.
 Ebenso bestehen weitere Serverprojekte, so dass die Serversoftware in Java, C++ 
 bzw. auch für Android Betriebssystem vorliegt. Dieses ermöglicht die größtmögliche 
@@ -377,7 +378,7 @@ Das Interesse an einer Messenger Applikation für kommunale Zwecke mit einfach a
 
 ## 4 Die Messenger App „Smoke“ bzw. deren Code-Basis als ein mögliches Pilotprojekt zum Ausbau
 
-Die so evaluierte und zur weiteren Verwendung vorgeschlagene Code-Basis des Messenger Smoke Chat soll daher in einigen weiteren Bereichen etwas vertieft vorgestellt werden.
+Die so evaluierte und zur weiteren Verwendung vorgeschlagene Code-Basis des Messenger Smoke Chat soll daher in einigen weiteren Bereichen etwas vertieft vorgestellt werden. Die Smoke Dokumentation gibt dazu auch viele weitere technische Details (Smoke 2017).
 
 
 ### 4.1 Kommunikation
@@ -569,6 +570,8 @@ Greis, Friedhelm: Strafe verhängt: Diese Nutzerdaten teilt Whatsapp weiterhin m
 Schneier, Bruce / Seidel, Kathleen / Vijayakumar, Saranya: A Worldwide Survey of Encryption Products, February 11, 2016 Version 1.0., zit. nach Adams, David / Maier, Ann-Kathrin (2016): BIG SEVEN Study, open source crypto-messengers to be compared - or: Comprehensive Confidentiality Review & Audit of GoldBug, Encrypting E-Mail-Client & Secure Instant Messenger, Descriptions, tests and analysis reviews of 20 functions of the application based on the essential fields and methods of evaluation of the 8 major international audit manuals for IT security investigations including 38 figures and 87 tables, URL: https://sf.net/projects/goldbug/files/bigseven-crypto-audit.pdf - English / German Language, Version 1.1, 305 pages, June 2016
 
 Smoltczyk, Maja: Datenschutzmängel bei Nutzung von Whatsapp an Schulen - Tätigkeitsbericht der Berliner Datenschutzbeauftragten 2016, URL: https://www.datenschutz-berlin.de/, zit. nach: Schulzki-Haddouti, Christiane: Datenschutzbeauftragte sieht schwere Datenschutzmängel bei Nutzung von Whatsapp an Schulen, URL: https://www.heise.de/newsticker/meldung/Datenschutzbeauftragte-sieht-schwere-Datenschutzmaengel-im-Berliner-Gesundheitswesen-3678056.html, 07.04.2017
+
+Smoke: Documentation of the Android Messenger Application Smoke with Encryption, URL: https://github.com/textbrowser/smoke/raw/master/Documentation/Smoke.pdf
 
 SVZ: Mangelnde Aufklärung : Lehrer sollten Whatsapp und Co. nicht für Klassenchat nutzen, URL: https://www.svz.de/18100191, 18.10.2017.
 
