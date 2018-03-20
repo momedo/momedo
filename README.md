@@ -22,11 +22,11 @@
     4.8 Benutzeroberfläche
     4.9 Quelloffene Codebasis und aktive Entwicklung
 
-5. Funktionsweise des Smokestack Servers im Detail
+5 Funktionsweise des Smokestack Servers im Detail
 
-6. Management Summary / Ausblick und Zusammenfassung
+6 Management Summary / Ausblick und Zusammenfassung
 
-7. Literaturverzeichnis
+7 Literaturverzeichnis
 ```
 
 
