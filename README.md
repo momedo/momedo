@@ -3,12 +3,12 @@
 
 
 **Gliederung:**
-
+```
 1 Ausgangslage
 
 2 Zielsetzung, Fachbereichsbefragung sowie Anforderungen und Spezifikationen 
 
-3 Landschafts- und Kontext-Analyse
+3 Landschafts- und Kontext-Analyse 
     3.1 Vergleich Smoke und Delta
 
 4 Die Messenger App „Smoke“ bzw deren Code-Basis als ein mögliches Pilotprojekt zum Ausbau
@@ -27,7 +27,7 @@
 6. Management Summary / Ausblick und Zusammenfassung
 
 7. Literaturverzeichnis
-
+```
 
 
 
