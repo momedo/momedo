@@ -477,6 +477,7 @@ Und mit dieser Kennung wird ein verschlüsselter Kanal zwischen Kollegen eröffn
 
 
 *Screenshot SIP HASH-ID*
+![Screenshot SIP HASH-ID](/readme_images/smoke_siphash_id.png)
 
 
 Der Identifier des Smoke Messengers ist eine SIP-HASH ID, ein kurzer String wie er von Lizenzschlüsseln bekannt ist. 
