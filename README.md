@@ -405,6 +405,7 @@ Im Klienten Smoke ist die IP und Port des Servers direkt in der App eingebaut un
 
 
 *Screenshot der Serversoftware in C++*
+![Screenshot der Serversoftware in C++](/readme_images/spot-on-server.png)
 
 
 Neben Java besteht auch eine Code Basis für einen Kommunikationsserver in der Programmiersprache C++.
