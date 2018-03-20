@@ -31,7 +31,8 @@
 
 ```
 Bibliographischer Verweis:
-Momedo: Open Source Mobiler Messenger für kommunale und schulische Zwecke mit Verschlüsselung, Github, URL: https://github.com/momedo/momedo/blob/master/README.md , 2018
+Momedo: Open Source Mobiler Messenger für kommunale und schulische Zwecke mit Verschlüsselung, 
+Github, URL: https://github.com/momedo/momedo/blob/master/README.md , 2018
 ```
 
 
