@@ -531,6 +531,28 @@ Aufgrund der Aktivität des Projektes in der Entwicklung kann eine Weiterentwick
 ## 5 Funktionsweise des Smokestack Servers im Detail
 
 
+*Screenshot SmokeStack Messenger Server: Listener*
+![Screenshot SmokeStack Messenger Server: Listener](/readme_images/smokestack_listener.jpg)
+
+
+*Screenshot SmokeStack Messenger Server: Participants*
+![Screenshot SmokeStack Messenger Server: Participants](/readme_images/smokestack_participants.jpg)
+
+
+*Screenshot SmokeStack Messenger Server: Neighbors*
+![Screenshot SmokeStack Messenger Server: Neighbors](/readme_images/smokestack_neighbor.jpg)
+
+
+*Screenshot SmokeStack Messenger Server: Ozones*
+![Screenshot SmokeStack Messenger Server: Ozones](/readme_images/smokestack_ozones.jpg)
+
+
+*Screenshot SmokeStack Messenger Server: Password*
+![Screenshot SmokeStack Messenger Server: Password](/readme_images/smokestack_password.jpg)
+
+
+*Screenshot SmokeStack Messenger Server: Authenticate*
+![Screenshot SmokeStack Messenger Server: Authenticate](/readme_images/smokestack_authenticate.jpg)
 
 
 
