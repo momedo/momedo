@@ -22,13 +22,18 @@
     4.8 Benutzeroberfläche
     4.9 Quelloffene Codebasis und aktive Entwicklung
 
-5. Funktionsweise des Smokestack Servers im Detail
+5 Funktionsweise des Smokestack Servers im Detail
 
-6. Management Summary / Ausblick und Zusammenfassung
+6 Management Summary / Ausblick und Zusammenfassung
 
-7. Literaturverzeichnis
+7 Literaturverzeichnis
 ```
 
+```
+Bibliographischer Verweis:
+Momedo: Open Source Mobiler Messenger für kommunale und schulische Zwecke mit Verschlüsselung, 
+Github, URL: https://github.com/momedo/momedo/blob/master/README.md , 2018
+```
 
 
 ## 1 Ausgangslage
@@ -286,6 +291,7 @@ Smoke Chat:
 Mobile, quelloffene und verschlüsselnde Chat Applikation für Android
 Repositorium: https://github.com/textbrowser/smoke
 Projektseite: https://textbrowser.github.io/smoke/
+Manual: https://github.com/textbrowser/smoke/raw/master/Documentation/Smoke.pdf
 Serversoftware ist die einfach zu administrierende Software SmokeStack.
 Ebenso bestehen weitere Serverprojekte, so dass die Serversoftware in Java, C++ 
 bzw. auch für Android Betriebssystem vorliegt. Dieses ermöglicht die größtmögliche 
@@ -377,7 +383,7 @@ Das Interesse an einer Messenger Applikation für kommunale Zwecke mit einfach a
 
 ## 4 Die Messenger App „Smoke“ bzw. deren Code-Basis als ein mögliches Pilotprojekt zum Ausbau
 
-Die so evaluierte und zur weiteren Verwendung vorgeschlagene Code-Basis des Messenger Smoke Chat soll daher in einigen weiteren Bereichen etwas vertieft vorgestellt werden.
+Die so evaluierte und zur weiteren Verwendung vorgeschlagene Code-Basis des Messenger Smoke Chat soll daher in einigen weiteren Bereichen etwas vertieft vorgestellt werden. Die Smoke Dokumentation gibt dazu auch viele weitere technische Details (Smoke 2017).
 
 
 ### 4.1 Kommunikation
@@ -392,7 +398,9 @@ Der Server ist sehr leicht administrierbar. Es ist lediglich auf der IP der host
 Die Einfachheit der Administrierbarkeit des Servers bietet sehr große Chancen auf eine Nutzung auch von anderen Zielgruppen, wie von Informatik-Lehrern, die für eine Klasse oder Schule einen kommunalen Messenger anbieten möchten.
 
 
-*Screenshot der Serversoftware in Java*
+*Screenshot der Serversoftware in Java
+![Screenshot der Serversoftware in Java](/readme_images/smokestack.png)
+![Screenshot der Serversoftware in Java](/readme_images/smoke_neighbor.png)
 
 
 Die Abbildungen zeigen einmal die Android Java Anwendung für den Server SmokeStack und die Verbindung aufgebaut vom Klienten Smoke zum Listener der Servers.
@@ -403,6 +411,7 @@ Im Klienten Smoke ist die IP und Port des Servers direkt in der App eingebaut un
 
 
 *Screenshot der Serversoftware in C++*
+![Screenshot der Serversoftware in C++](/readme_images/spot-on-server.png)
 
 
 Neben Java besteht auch eine Code Basis für einen Kommunikationsserver in der Programmiersprache C++.
@@ -442,7 +451,7 @@ Das Verschlüsselungsverfahren setzt standardmäßig auf eine Infrastruktur aus 
 
 
 *Screenshot der Verschlüsselungsinformation Key und Signatur*
-
+![Screenshot der Verschlüsselungsinformation Key und Signatur](/readme_images/smoke_encryption_key.png)
 
 Die Verschlüsselungsdaten werden ausgewiesen und hier der Fingerprint des öffentlichen Schlüssels dargestellt.
 Für den Nutzer kann diese zusätzliche Darstellung z.B. in angepassten Kompilierungen verborgen werden.
@@ -475,6 +484,7 @@ Und mit dieser Kennung wird ein verschlüsselter Kanal zwischen Kollegen eröffn
 
 
 *Screenshot SIP HASH-ID*
+![Screenshot SIP HASH-ID](/readme_images/smoke_siphash_id.png)
 
 
 Der Identifier des Smoke Messengers ist eine SIP-HASH ID, ein kurzer String wie er von Lizenzschlüsseln bekannt ist. 
@@ -486,6 +496,7 @@ Smoke hat mit dem Server SmokeStack einen Schlüssel-Server bereits integriert u
 Ein Symbol zeigt in der Teilnehmerliste den erfolgreichen Schlüsselaustausch der Teilnehmer an.
 
 *Screenshot erfolgreicher Schlüsselaustausch / Teilnehmerliste*
+![Screenshot erfolgreicher Schlüsselaustausch / Teilnehmerliste](/readme_images/smoke_participants.png)
 
 
 Die Teilnehmerliste in Smoke Messenger besteht aus Teilnehmer und Sip-Hash-Kennung.
@@ -498,7 +509,7 @@ Die Benutzeroberfläche ist derzeit noch nicht in eigene Seiten pro Teilnehmer g
 
 
 *Screenshot der Benutzeroberfläche*
-
+![Screenshot der Benutzeroberfläche](/readme_images/smoke_current_chat_gui.png)
 
 Die Benutzeroberfläche ist derzeit im IRC-Stile und zeigt sämtliche Nachrichten auf einer Seite an.
 Hier ist die Anpassung vorzunehmen, dass für jeden Nutzer eine eigene Message-Historie aufgebaut wird.
@@ -520,6 +531,28 @@ Aufgrund der Aktivität des Projektes in der Entwicklung kann eine Weiterentwick
 ## 5 Funktionsweise des Smokestack Servers im Detail
 
 
+*Screenshot SmokeStack Messenger Server: Listener*
+![Screenshot SmokeStack Messenger Server: Listener](/readme_images/smokestack_listener.jpg)
+
+
+*Screenshot SmokeStack Messenger Server: Participants*
+![Screenshot SmokeStack Messenger Server: Participants](/readme_images/smokestack_participants.jpg)
+
+
+*Screenshot SmokeStack Messenger Server: Neighbors*
+![Screenshot SmokeStack Messenger Server: Neighbors](/readme_images/smokestack_neighbor.jpg)
+
+
+*Screenshot SmokeStack Messenger Server: Ozones*
+![Screenshot SmokeStack Messenger Server: Ozones](/readme_images/smokestack_ozones.jpg)
+
+
+*Screenshot SmokeStack Messenger Server: Password*
+![Screenshot SmokeStack Messenger Server: Password](/readme_images/smokestack_password.jpg)
+
+
+*Screenshot SmokeStack Messenger Server: Authenticate*
+![Screenshot SmokeStack Messenger Server: Authenticate](/readme_images/smokestack_authenticate.jpg)
 
 
 
@@ -561,9 +594,13 @@ Landesbeauftragte für den Datenschutz Niedersachsen: Merkblatt für die Nutzung
 
 Greis, Friedhelm: Strafe verhängt: Diese Nutzerdaten teilt Whatsapp weiterhin mit Facebook, https://www.golem.de/news/strafe-verhaengt-diese-nutzerdaten-teilt-whatsapp-weiterhin-mit-facebook-1803-133372.html, 16.03.2018
 
+Momedo: Open Source Mobiler Messenger für kommunale und schulische Zwecke mit Verschlüsselung, Github, URL: https://github.com/momedo/momedo/blob/master/README.md , 2018
+
 Schneier, Bruce / Seidel, Kathleen / Vijayakumar, Saranya: A Worldwide Survey of Encryption Products, February 11, 2016 Version 1.0., zit. nach Adams, David / Maier, Ann-Kathrin (2016): BIG SEVEN Study, open source crypto-messengers to be compared - or: Comprehensive Confidentiality Review & Audit of GoldBug, Encrypting E-Mail-Client & Secure Instant Messenger, Descriptions, tests and analysis reviews of 20 functions of the application based on the essential fields and methods of evaluation of the 8 major international audit manuals for IT security investigations including 38 figures and 87 tables, URL: https://sf.net/projects/goldbug/files/bigseven-crypto-audit.pdf - English / German Language, Version 1.1, 305 pages, June 2016
 
 Smoltczyk, Maja: Datenschutzmängel bei Nutzung von Whatsapp an Schulen - Tätigkeitsbericht der Berliner Datenschutzbeauftragten 2016, URL: https://www.datenschutz-berlin.de/, zit. nach: Schulzki-Haddouti, Christiane: Datenschutzbeauftragte sieht schwere Datenschutzmängel bei Nutzung von Whatsapp an Schulen, URL: https://www.heise.de/newsticker/meldung/Datenschutzbeauftragte-sieht-schwere-Datenschutzmaengel-im-Berliner-Gesundheitswesen-3678056.html, 07.04.2017
+
+Smoke: Documentation of the Android Messenger Application Smoke with Encryption, URL: https://github.com/textbrowser/smoke/raw/master/Documentation/Smoke.pdf , 2017
 
 SVZ: Mangelnde Aufklärung : Lehrer sollten Whatsapp und Co. nicht für Klassenchat nutzen, URL: https://www.svz.de/18100191, 18.10.2017.
 
