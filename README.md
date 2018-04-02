@@ -516,6 +516,9 @@ Hier ist die Anpassung vorzunehmen, dass für jeden Nutzer eine eigene Message-H
 Dieses kann durch kurzfristige Java Programmierung mit hauseigenen Bordmitteln eine wie bei anderen Messangern gestaltete Oberfläche erwirkt werden.
 Dieses ist die eigentliche Aufwendung und Investition in den Messenger bzw. dessen Code Basis, die bei der Kompilierung und dem Branding des Messengers auf eine jeweilige Stadterwaltung oder Schule erfolgen kann.
 
+Die Benutzeroberfläche zeigt auch den "Calling" Knopf an, mit dem der Smoke Client auch das "Cryptographische Calling" unterstützt. Dieses ermöglicht neue Schlüssel zu generieren (vgl. auch die ausführlichere Beschreibung des Cryptographischen Callings in der technischen Dokumentation der Applikationen im Source).
+Mit einem Druck auf die Teilnehmer eröffnet sich auch ein Kontext-Menü, mit dem weitere Funktionen und kryptographsiche Funktionen ermöglicht werden. So kann beispielsweise für die Sitzung manuell und individuell ein Ende-zu-Ende verschlüsselndes Passwort in zwei Klienten zusätzlich definiert werden.
+
 
 ### 4.9 Quelloffene Codebasis und aktive Entwicklung 
 
@@ -540,7 +543,7 @@ Wer die SmokeStack APK für Anroid heruntergeladen hat und auf seinem Tablet, An
 ![Screenshot SmokeStack Messenger Server: Listener](/readme_images/smokestack_listener.jpg)
 
 
-Der Router als Listener ist damit funktionsfähig. Um jedoch für die Nutzer weitere Annehmlichkeiten vorzuhalten, ist es sinnvoll, die Nutzer auf dem Server mit Namen und Sip-Hash-ID am SmokeStack Server zu definieren. Dieses betrifft insbesondere die sodann die Schlüsseltausche und auch das Speichern von Offline-Nachrichgten mittels der (weiter unten beschriebenen) Funktion "Ozone". 
+Der Router als Listener ist damit funktionsfähig. Um jedoch für die Nutzer weitere Annehmlichkeiten vorzuhalten, ist es sinnvoll, die Nutzer auf dem Server mit Namen und Sip-Hash-ID am SmokeStack Server zu definieren. Dieses betrifft insbesondere die sodann die Schlüsseltausche und auch das Speichern von Offline-Nachrichgten mittels der (weiter unten beschriebenen) Funktion "Ozone". Wird der Finger länger auf einen Teilnehmer gehalten, erscheint das Kontext-Menü, mit dem weitere Optionen wie das Umbenennen oder Enfernen des Teilnehmers möglich wird. Aber auch Funktionen, den Schlüssel zu tauschen oder in anderen Instanzen zu hinterlegen, wird mit dem Kontext-Menü pro Teilnehmer möglich.
 
 *Screenshot SmokeStack Messenger Server: Participants*
 ![Screenshot SmokeStack Messenger Server: Participants](/readme_images/smokestack_participants.jpg)
@@ -551,7 +554,13 @@ Die Funktionalität der "Nachbarn" ist dafür sinnvoll, wenn andere Server an de
 *Screenshot SmokeStack Messenger Server: Neighbors*
 ![Screenshot SmokeStack Messenger Server: Neighbors](/readme_images/smokestack_neighbor.jpg)
 
-Die Funktionalität, ein Postfach auf dem Server einzurichten, wird in SokeStack "Ozone" genannt. Damit kann ein Nutzer, wenn sein Adressat offline ist, die Nachrichten im Ozone Postfach des Servers hinterlegen und abrufen, wenn er online kommt. Nutzer vereinbaren daher einfach ein Passwort in ihrem Smoke-Klienten und hinterlegen es ebenso auf dem SmokeStack Server. Mittels der cryptographischen Prozesse, können die Nachrichten dann nicht nur sicher gelagert werden, sondern beim Online-Kommen dann auch empfangen werden.
+Die Funktionalität, ein Postfach auf dem Server einzurichten, wird in SokeStack "Ozone" genannt. Damit kann ein Nutzer, wenn sein Adressat offline ist, die Nachrichten im Ozone Postfach des Servers hinterlegen und abrufen, wenn er online kommt. Nutzer vereinbaren daher einfach ein Passwort in ihrem Smoke-Klienten und hinterlegen es ebenso auf dem SmokeStack Server. Mittels der cryptographischen Prozesse, können die Nachrichten dann nicht nur sicher gelagert werden, sondern beim Online-Kommen dann auch empfangen werden. 
+
+
+Zusätzlich zur Ozone-Funktion der Speicherung der Nachrichten, ist SmokeStack ein Schlüssel-Server für die private-öffentliche Schlüssel-Infrastruktur. Ein zusätzlicher Schlüsselserver ist also nicht mehr erforderlich, da dieses bereits im SmokeStack Server und im Flow mit dem Smoke-Clienten direkt eingebaut ist.
+
+Durch Hinzufügung der Teilnehmer in SmokeStack ist der Server-Administrator verantwortlich für die Koordination der Hinterlegung der Schlüssel. Der Nutzer kann sodann mit anderen Nutzern die öffentlichen Schlüssel von spezifischen Teilnehmern ebenso über die Ozone-Funktionalität abrufen. Die Schlüssel werden ebenso mit digitalen Signauten gesichert. Die Signaturen sind Teil des EPKS-Bündels (Echo Public Key Share). Sind die Signaturen für den (RSA) Schlüssel gültig, wird der öffentliche Schlüssel akzeptiert. 
+
 
 *Screenshot SmokeStack Messenger Server: Ozones*
 ![Screenshot SmokeStack Messenger Server: Ozones](/readme_images/smokestack_ozones.jpg)
