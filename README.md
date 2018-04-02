@@ -530,30 +530,45 @@ Aufgrund der Aktivität des Projektes in der Entwicklung kann eine Weiterentwick
 
 ## 5 Funktionsweise des Smokestack Servers im Detail
 
+Nachdem wir nun erstens festgestellt haben, dass ein kommunaler Messenger mit Verschlüsselung auf einer adäquaten quelloffenen Codebasis beruhen sollte, um weitere kommunale Funktionen darin einbauen zu können und dass zweitens der Setup des Kommunikationsservers ebenso einfach wie in eigener Hand möglich sein muss, soll hier nun für die ausgewählte Grundlage des Smoke Messengers im Folgenden nun der SmokeStack Komunikations-Server im Setup und mit seinen Funktionen ausführlicher beschrieben werden. Die Leichtigkeit, einen eigene (schulischen oder kommunalen) Kommunikatonsserver für eine verschlüsselt kommunizierende mobile App aufsetzen zu können, ist das A und O für die Gestaltung einer kommunalen Umsetzungen mobiler Kommunikation.  
+
+
+Wie beim Server Spot-On sowie Spot-On-Lite, der Deamon Variante von Spot-On, kann auch mit dem Server SmokeStack eine Einrichtung durch wenige Mausklicks erfolgen. Es ist ledichlich ein Listener zu eröffnen, was durch jeden Laien erfolgen kann.
+Wer die SmokeStack APK für Anroid heruntergeladen hat und auf seinem Tablet, Android-Media-Server oder Telefon installiert hat, wird nach der Setzung eines Passwortes um die Applikation aufzurufen direkt im Feld des Listeners nach der Eingabe einer IP und eines Ports gefragt. Es ist hier die IP zu nehmen, an der das Gerät angeschlossen ist (wird in Android oder auch im Router wie der Fritz Box angezeigt). Der Port wird idealerweise bei 4710 belassen. Ist die IP eine lokale im eigenen Haus-Netz, sollte sie durch weitere Geräte im eigenen Haus-Netz sofort erreichbar sein. Soll der Smoke-Stack-Server vom Internet aus erreichbar sein, ist die Firewall bzw. der Router für den gewählten Port entsprechend weiterzuleiten.
 
 *Screenshot SmokeStack Messenger Server: Listener*
 ![Screenshot SmokeStack Messenger Server: Listener](/readme_images/smokestack_listener.jpg)
 
 
+Der Router als Listener ist damit funktionsfähig. Um jedoch für die Nutzer weitere Annehmlichkeiten vorzuhalten, ist es sinnvoll, die Nutzer auf dem Server mit Namen und Sip-Hash-ID am SmokeStack Server zu definieren. Dieses betrifft insbesondere die sodann die Schlüsseltausche und auch das Speichern von Offline-Nachrichgten mittels der (weiter unten beschriebenen) Funktion "Ozone". 
+
 *Screenshot SmokeStack Messenger Server: Participants*
 ![Screenshot SmokeStack Messenger Server: Participants](/readme_images/smokestack_participants.jpg)
+
+Die Funktionalität der "Nachbarn" ist dafür sinnvoll, wenn andere Server an den eigenen Server angeschlossen werden sollen. Die Server können also föderiert werden und somit stehen den Nutzern auch mehrere Server zur Verfügug, was z.B. die Sicherheit der Verfügbarkeit erhöht. Nutzer können also mit einem, mit beiden oder mit einem alternativen Server angebunden werden.
 
 
 *Screenshot SmokeStack Messenger Server: Neighbors*
 ![Screenshot SmokeStack Messenger Server: Neighbors](/readme_images/smokestack_neighbor.jpg)
 
+Die Funktionalität, ein Postfach auf dem Server einzurichten, wird in SokeStack "Ozone" genannt. Damit kann ein Nutzer, wenn sein Adressat offline ist, die Nachrichten im Ozone Postfach des Servers hinterlegen und abrufen, wenn er online kommt. Nutzer vereinbaren daher einfach ein Passwort in ihrem Smoke-Klienten und hinterlegen es ebenso auf dem SmokeStack Server. Mittels der cryptographischen Prozesse, können die Nachrichten dann nicht nur sicher gelagert werden, sondern beim Online-Kommen dann auch empfangen werden.
 
 *Screenshot SmokeStack Messenger Server: Ozones*
 ![Screenshot SmokeStack Messenger Server: Ozones](/readme_images/smokestack_ozones.jpg)
 
 
+Der Server wird wie genannt auf dem Android-Betriebssystem mit einem Passwort gesichert, so dass die Funktionalitäten oder der Aufruf der App nur zur Verfügung steht, wenn eine Authentifizierung erfolgt ist.
+
 *Screenshot SmokeStack Messenger Server: Password*
 ![Screenshot SmokeStack Messenger Server: Password](/readme_images/smokestack_password.jpg)
 
+Nach eingegebenem Passwort sieht die Startseite zur Authentifizierung wie folgt aus:
 
 *Screenshot SmokeStack Messenger Server: Authenticate*
 ![Screenshot SmokeStack Messenger Server: Authenticate](/readme_images/smokestack_authenticate.jpg)
 
+
+SmokeStack ist eine schnelle und mobile und zugleich stabile und funktionalitätenreiche Appkikation, um für ein Amt oder eine Schulklasse oder bei einem Workshop mit einem einfachen Android Gerät zahlreichen Nutzern einen Kommunikationsserver zu eröffnen. Darüber hinaus stehen ebenso die C++ Varianten Spot-On und Spot-On-Lite zur Verfügung. Es ist ein leichtes, mit drei Android-Geräten einen intermediären SmokeStack Server zwischen zwei kommunizierenden Smoke-Clienten auszutesten. 
 
 
 ## 6 Management Summary / Ausblick und Zusammenfassung
