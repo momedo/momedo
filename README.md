@@ -520,6 +520,9 @@ Dieses ist die eigentliche Aufwendung und Investition in den Messenger bzw. dess
 Die Benutzeroberfläche zeigt auch den "Calling" Knopf an, mit dem der Smoke Client auch das "Cryptographische Calling" unterstützt. Dieses ermöglicht neue Schlüssel zu generieren (vgl. auch die ausführlichere Beschreibung des Cryptographischen Callings in der technischen Dokumentation der Applikationen im Source).
 Mit einem Druck auf die Teilnehmer eröffnet sich auch ein Kontext-Menü, mit dem weitere Funktionen und kryptographsiche Funktionen ermöglicht werden. So kann beispielsweise für die Sitzung manuell und individuell ein Ende-zu-Ende verschlüsselndes Passwort in zwei Klienten zusätzlich definiert werden.
 
+*Erster Screenshot der neuen Benutzeroberfläche - Member Chat Pages*
+![Screenshot der neuen Benutzeroberfläche](/readme_images/smoke_left_right_memberchat.jpg)
+
 
 ### 4.9 Quelloffene Codebasis und aktive Entwicklung 
 
