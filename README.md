@@ -1,4 +1,4 @@
-# momedo
+﻿# momedo
 ### Open Source Mobiler Messenger für kommunale und schulische Zwecke mit Verschlüsselung
 
 
@@ -9,7 +9,7 @@
 2 Zielsetzung, Fachbereichsbefragung sowie Anforderungen und Spezifikationen 
 
 3 Landschafts- und Kontext-Analyse 
-    3.1 Vergleich Smoke und Delta
+    3.1 Vergleich Smoke, Lettera und Delta
 
 4 Die Messenger App „Smoke“ bzw deren Code-Basis als ein mögliches Pilotprojekt zum Ausbau
     4.1 Kommunikation
@@ -279,7 +279,7 @@ Wie bereits herausgestellt sollten auch für den Erfolg des Projektes Applikatio
 
 Nachdem Verschlüsselungsexperte Bruce Schneier (2016) eine umfassende Liste sämtlicher seinerzeit in der Welt existierender Verschlüsselungswerkzeuge erstellt hat, lässt sich festhalten, dass unter den oben getroffenen Annahmen insbesondere zwei Applikationen übrig bleiben, die als mobile Messenger diese Voraussetzungen ideal zu erfüllen scheinen.
 
-Es handelt ich hierbei um den Messenger Smoke Chat und einmal um den Messenger Delta Chat.
+Es handelt ich hierbei um den Messenger Smoke Chat sowie um den Messenger Lettera und einmal um den Messenger Delta Chat.
 
 Beide Applikationen sind junge und inzwischen gereifte Projekte insofern durchaus etabliert in der Softwarelandschaft und bieten mit ihrem quelloffenen Code eine ausführliche Basis, um eine kommunalspezifische Anwendung daraus mit geringen Anpassungen (z.B. Branding) in der Benutzeroberfläche erstellen zu können. Insbesondere die Codebasis für die Serversoftware gilt es zu betrachten.
 
@@ -303,6 +303,20 @@ und zu iOS portiert werden.
 ```
 
 
+### Lettera Chat
+```
+Lettera Chat:
+Mobile, quelloffene und verschlüsselnde Chat Applikation für Android
+Repositorium: https://github.com/textbrowser/lettera
+Projektseite: https://github.com/textbrowser/lettera
+Die Serversoftware basiert auf einem IMAP Server. Diese Architektur erfordert 
+spezifische Kenntnisse in der Einrichtung eines solchen Servers und die Ausstattung 
+der Nutzer mit einer E-Mailadresse, diese kann bei Lettera sowohl für E-Mail als auch für Chat genutzt werden. Der Vorteil von Lettera gegenüber Delta ist jedoch die einfachere Benutzeroberfläche sowie keine größere Abhängigkeit von externen Bibliotheken, so dass von einer schlankeren Programmierung gesprochen werden kann.
+Nachteil: IOS Portierung wäre ebenso erforderlich und ähnliche Konstitution wie bei Delta.
+```
+
+
+
 ### Delta Chat
 ```
 Delta Chat:
@@ -320,45 +334,45 @@ was Messenger und was E-Mailadresse ist und an welche dann keine Plaintext-Nachr
 ```
 
 
-## 3.1 Vergleich Smoke und Delta
+## 3.1 Vergleich Smoke und Lettera und Delta
 
-Sowohl Smoke Chat wie auch Delta Chat sind probate Grundlagen eine Art kommunales quelloffenes WhatsApp mit wenig Aufwand und leichten Anpassungen in der Benutzeroberfläche zu erstellen.
+Sowohl Smoke Chat wie auch Lettera Messenger und Delta Chat sind probate Grundlagen eine Art kommunales quelloffenes WhatsApp mit wenig Aufwand und leichten Anpassungen in der Benutzeroberfläche zu erstellen.
 
 Anhand der aufgestellten Kriterien sollen beide Applikationen und Server nun eingeschätzt werden, denn es handelt sich bei beiden um unterschiedliche Architekturen, die nicht nur technisch zu bewerten sind, sondern auch Einfluss auf die Handhabung und Nutzung haben werden und damit die kommunalen Arbeitsprozesse beeinflussen werden.
 
 
 
-| KRITERIUM  |  SMOKE CHAT |  DELTA CHAT  |   
+| KRITERIUM  |  SMOKE CHAT |  DELTA CHAT  | Lettera Chat  |   
 |---|---|---|
 |**TECHNISCHE SPEZIFIKATIONEN**|   |   |  
-|**Einfache Administration Server**| Sehr einfache Serveradministration, z.B. mit Serversoftware SmokeStack oder Spot-on. Serversoftware liegt für zahlreiche Betriebssysteme vor wie auch in Java und C++. Die Serveradministration erfolgt sehr einfach mit wenigen Klicks über die Einrichtung eines HTTPS Listeners. | Nutzung von IMAP Servern. Damit werden Email-Server für Chat umfunktioniert, d.h. es gibt auch ggf. Verzögerungen in der Zustellung. Es muss ausgeschlossen werden, dass die Nutzer andere IMAP Server als den für die jeweilige Kommune bzw. Schule und dieses Programm dediziert nutzen. Dieses wäre faktisch unmöglich, und E-MailAdressen könnten verwechselt werden. Die IMAP Serveradministration ist nur etwas für Experten.|   
-|**Quelloffener Servercode**|Ja, BSD license. Kostenfreie Serversoftware in der Architektur vorhanden.|Lizenz in Hand Dritter, den Anbietern des IMAP Servers. Lizenzkosten für das Aufsetzen ggf. eines Exchange Servers. Es entstehen Kosten. Open-Xchange, Scalix, Zimbra und Zarafa als Exchange-Ersatz nicht erprobt im einfachen Einsatz und im Zusammenspiel mit Delta.|
-|**Ohne DHT**| Ohne DHT|Ohne DHT| 
-|**Roll-out Leichtigkeit Server**|Sehr einfach, auch in Fachbereichen ohne IT-Support.|Experten erforderlich für Einrichtung eines IMAP-Servers.| 
-|**Verschlüsselung**|PKI (Public Private Key Infrastructure) basierend auf den Algorithmen RSA und McEliece, die untereinander kompatibel sind.|GPG mit nur einem Algorithmus im Angebot.| 
-|**Schlüsselmanagement**|SmokeStack Server sind zugleich auch Schlüssel-Server und ermöglichen einfaches Schlüssel-Management. Sowie: Nutzer können Schlüssel auch von Klient zu Klient übertragen.|Nutzer übertragen Schlüssel von Klient zu Klient durch einen automatischen Schlüsseltausch. Programmierung eines Schlüsselservers wäre ggf. erforderlich.| 
-|**Mobile zu Dekstop Kommunikation**|Messages können von der mobilen App auch zur Desktop App übertragen werden – trotz unterschiedlicher Schlüsselformate für Java und C++. Einfache Möglichkeit von mobiler Anwendung an einen Desktop Klienten zu chatten. Es bestehen dedizierte Desktop Anwendungen, die mit Smoke Messaging Nachrichten austauschen können.|Durch den Einsatz von GPG gibt es derzeit keine Messaging-Desktop Anwendungen für den Chat, ein Import der verschlüsselten Nachricht in einen E-Mail-Klienten ermöglicht keine automatisierte Entschlüsselung der Nachricht. Hoher Aufwand zur Entschlüsselung auf Desktop-Klienten, die es dediziert für Delta nicht gibt.| 
-|**Quelloffen, um fachbereichsspezifische Funktionen einbauen zu können**|Quelloffen für Klient und Server. BSD Lizenz.|Quelloffen für Klient. Server über IMAP, meist Exhange und closed source. Klient hat zusötzlich eine Core-Lib, beide GPLv3.| 
-|**Code Basis gut und strukturiert**|Ja. Gilt für Klient und Server.|Ja für Klient, jedoch mit Core Kernel.| 
-|**Betriebssysteme IOS und Android**|Derzeit verfügbar für Android (Java). Es besteht auch c++ Code (aufgrund des Desktop Clients), der bei IOS als Grundlage für Objective C genutzt werden kann. Portierung der App zu IOS also erforderlich.|Derzeit verfügbar für Android, IOS in Planung. Keine Desktop-Anwendung in C++ vorhanden. Portierung der App daher als Support erforderlich.| 
-|**Nutzer-Identifier**|Nutzer werden über eine Kurze zufällig Kennung wie „82K3JB4“ definiert und erkannt. Über diese Kennung funktioniert auch einfach und im Hintergrund der Schlüsseltausch für die Nutzer. Eine elegante Art des Schlüsselaustausches ohne großen Aufwand für den Nutzer.|Nutzer werden über eine E-Mailadresse definiert. Es ist eine Emailadresse des dedizierten IMAP Servers erforderlich und es ist sicherzustellen, dass Nutzer als Mitarbeiter einer Kommune oder Schule keine anderen IMAP Server anwenden. Es entstehen sonst für jeden Nutzer zwei E-Mailadressen, eine für Email, eine für den Messenger, die in der Adressierung von E-Mails nicht verwechselt werden sollten - auch aufgrund der Verschlüsselung.| 
-|**Multiple Instanzen**|Es ist möglich, die Message sowohl auf dem Tablet als auch auf dem Handy zu erhalten und zu entschlüsseln.|Die GPG Details der Verschlüsselung erfordern einen manuellen Import/Export der Verschlüsselungs-Credentials auf das zweite Gerät.|
-|**Nachricht an Offline-Kollegen**|Möglich über verschiedene Wege (Abrufgen über Postfach („Ozone“ genannt) im Server oder Versand, wenn Kollege online ist|Storage im IMAP Server.| 
-|**Gruppenchat**|Vorhanden über verschiedene Möglichkeiten (symmetrisch wie asymmetrisch). Sofortige Verfügbarkeit wie im IRC oder einer WhatsApp Gruppe.|Gruppenchat wird über Emails an mehrere Personen erreicht, ein Real-time Chat ggf. mit Verzögerungen je nach IMAP Server Abruf der einzelnen Teilnehmer.| 
-|**Gebühren**|Frei von Lizenz-Gebühren|Ggf. Gebühren und Lizenzen sowie deren Verwaltung für IMAP Server erforderlich.| 
-|**Benutzeroberflöche**|Für Android, Bedarf der Aufhübschung ggf. mit eigenen Mitteln |Für Android, Benutzeroberfläche am Nutzer orientiert und etwas elaborierter.| 
-|**Verfügbare Algorithmen**|KI, RSA und McEliece|GPG (RSA)| 
-|**Code-Lizenzen**|BSD|GPLv3| 
-|**Lib, Kernel, Core, Abhängigkeiten**|Geringe Abhänigkeiten von Bibliotheken.|Abhängigkeiten von GPG code, Mail core der App| 
-|**FACHBEREICHS SPEZIFIKATIONEN**|   |   | 
-|**Ersatz für Whatsapp**|Grundsätzlich Ja, nach Weiterentwicklung der GUI des Klienten|Ja im privaten Bereich, aber ggf. differierende Architektur.| 
-|**Versand von Bildern**|Derzeit in Implementierung für Inline-Versand.|Ja.   | 
+|**Einfache Administration Server**| Sehr einfache Serveradministration, z.B. mit Serversoftware SmokeStack oder Spot-on. Serversoftware liegt für zahlreiche Betriebssysteme vor wie auch in Java und C++. Die Serveradministration erfolgt sehr einfach mit wenigen Klicks über die Einrichtung eines HTTPS Listeners. | Nutzung von IMAP Servern. Damit werden Email-Server für Chat umfunktioniert, d.h. es gibt auch ggf. Verzögerungen in der Zustellung. Es muss ausgeschlossen werden, dass die Nutzer andere IMAP Server als den für die jeweilige Kommune bzw. Schule und dieses Programm dediziert nutzen. Dieses wäre faktisch unmöglich, und E-MailAdressen könnten verwechselt werden. Die IMAP Serveradministration ist nur etwas für Experten.| Bei Letttera ebenso Einsatz von IMAPS Server, die mit ihren Einstellungen einfach getestet werden können.  |
+|**Quelloffener Servercode**|Ja, BSD license. Kostenfreie Serversoftware in der Architektur vorhanden.|Lizenz in Hand Dritter, den Anbietern des IMAP Servers. Lizenzkosten für das Aufsetzen ggf. eines Exchange Servers. Es entstehen Kosten. Open-Xchange, Scalix, Zimbra und Zarafa als Exchange-Ersatz nicht erprobt im einfachen Einsatz und im Zusammenspiel mit Delta.| Lettera ist quelloffen und hat geringe Abhängigkeiten von externen Bibliotheken.|
+|**Ohne DHT**| Ohne DHT|Ohne DHT| Ohne DHT|
+|**Roll-out Leichtigkeit Server**|Sehr einfach, auch in Fachbereichen ohne IT-Support.|Experten erforderlich für Einrichtung eines IMAP-Servers.| Experten erforderlich für Einrichtung eines IMAP-Servers. |
+|**Verschlüsselung**|PKI (Public Private Key Infrastructure) basierend auf den Algorithmen RSA und McEliece, die untereinander kompatibel sind.|GPG mit nur einem Algorithmus im Angebot.| Lettera bietet GnuPG auf Basis von RSA und zusätzlich McEliece an. |
+|**Schlüsselmanagement**|SmokeStack Server sind zugleich auch Schlüssel-Server und ermöglichen einfaches Schlüssel-Management. Sowie: Nutzer können Schlüssel auch von Klient zu Klient übertragen.|Nutzer übertragen Schlüssel von Klient zu Klient durch einen automatischen Schlüsseltausch. Programmierung eines Schlüsselservers wäre ggf. erforderlich.| Nutzer übertragen Schlüssel von Klient zu Klient durch einen automatischen Schlüsseltausch. |
+|**Mobile zu Dekstop Kommunikation**|Messages können von der mobilen App auch zur Desktop App übertragen werden – trotz unterschiedlicher Schlüsselformate für Java und C++. Einfache Möglichkeit von mobiler Anwendung an einen Desktop Klienten zu chatten. Es bestehen dedizierte Desktop Anwendungen, die mit Smoke Messaging Nachrichten austauschen können.|Durch den Einsatz von GPG gibt es derzeit keine Messaging-Desktop Anwendungen für den Chat, ein Import der verschlüsselten Nachricht in einen E-Mail-Klienten ermöglicht keine automatisierte Entschlüsselung der Nachricht. Hoher Aufwand zur Entschlüsselung auf Desktop-Klienten, die es dediziert für Delta nicht gibt.| Durch den Einsatz von GPG gibt es derzeit keine Messaging-Desktop Anwendungen für den Chat. Mit Lettera kann sich jede Applikation verbinden, die PGP/GnuPG unterstützt, da die Schlüssel exportierbar sind.|
+|**Quelloffen, um fachbereichsspezifische Funktionen einbauen zu können**|Quelloffen für Klient und Server. BSD Lizenz.|Quelloffen für Klient. Server über IMAP, meist Exhange und closed source. Klient hat zusötzlich eine Core-Lib, beide GPLv3.| Quelloffen für Klient. BSD. Server über IMAP.|
+|**Code Basis gut und strukturiert**|Ja. Gilt für Klient und Server.|Ja für Klient, jedoch mit Core Kernel.| Ja. Gilt für Klient. Aufgrund geringerer Abhängigkeiten von externen Bibliotheken ist Lettera besser für Open Source und Kompilierungen/Forks geeignet.|
+|**Betriebssysteme IOS und Android**|Derzeit verfügbar für Android (Java). Es besteht auch c++ Code (aufgrund des Desktop Clients), der bei IOS als Grundlage für Objective C genutzt werden kann. Portierung der App zu IOS also erforderlich.|Derzeit verfügbar für Android, IOS in Planung. Keine Desktop-Anwendung in C++ vorhanden. Portierung der App daher als Support erforderlich.| Derzeit verfügbar für Android. |
+|**Nutzer-Identifier**|Nutzer werden über eine Kurze zufällig Kennung wie „82K3JB4“ definiert und erkannt. Über diese Kennung funktioniert auch einfach und im Hintergrund der Schlüsseltausch für die Nutzer. Eine elegante Art des Schlüsselaustausches ohne großen Aufwand für den Nutzer.|Nutzer werden über eine E-Mailadresse definiert. Es ist eine Emailadresse des dedizierten IMAP Servers erforderlich und es ist sicherzustellen, dass Nutzer als Mitarbeiter einer Kommune oder Schule keine anderen IMAP Server anwenden. Es entstehen sonst für jeden Nutzer zwei E-Mailadressen, eine für Email, eine für den Messenger, die in der Adressierung von E-Mails nicht verwechselt werden sollten - auch aufgrund der Verschlüsselung.| Nutzer werden über eine E-Mailadresse definiert. |
+|**Multiple Instanzen**|Es ist möglich, die Message sowohl auf dem Tablet als auch auf dem Handy zu erhalten und zu entschlüsseln.|Die GPG Details der Verschlüsselung erfordern einen manuellen Import/Export der Verschlüsselungs-Credentials auf das zweite Gerät.| Jede Instanz mit einem GnuPG Import/Export für alle Schlüssel (also auch derprivaten) kann dann die Nachrichten lesen bei Zugang zum IMAP-Konto, d.h. multiple Instanzen sind möglich.|
+|**Nachricht an Offline-Kollegen**|Möglich über verschiedene Wege (Abrufgen über Postfach („Ozone“ genannt) im Server oder Versand, wenn Kollege online ist|Storage im IMAP Server.| Storage im IMAP Server.|
+|**Gruppenchat**|Vorhanden über verschiedene Möglichkeiten (symmetrisch wie asymmetrisch). Sofortige Verfügbarkeit wie im IRC oder einer WhatsApp Gruppe.|Gruppenchat wird über Emails an mehrere Personen erreicht, ein Real-time Chat ggf. mit Verzögerungen je nach IMAP Server Abruf der einzelnen Teilnehmer.| |Gruppenchat wird über Emails an mehrere Personen erreicht, ein Real-time Chat ggf. mit Verzögerungen je nach IMAP Server Abruf.|
+|**Gebühren**|Frei von Lizenz-Gebühren|Ggf. Gebühren und Lizenzen sowie deren Verwaltung für IMAP Server erforderlich.| Ggf. Gebühren und Lizenzen sowie deren Verwaltung für IMAP Server erforderlich.|
+|**Benutzeroberflöche**|Für Android, Bedarf der Aufhübschung ggf. mit eigenen Mitteln |Für Android, Benutzeroberfläche am Nutzer orientiert und etwas elaborierter.| |Für Android, Benutzeroberfläche am Nutzer orientiert und sehr elaboriert.|
+|**Verfügbare Algorithmen**|KI, RSA und McEliece|GPG (RSA)| RSA und McEliece|
+|**Code-Lizenzen**|BSD|GPLv3| BSD|
+|**Lib, Kernel, Core, Abhängigkeiten**|Geringe Abhänigkeiten von Bibliotheken.|Abhängigkeiten von GPG code, Mail core der App| Geringe Abhänigkeiten von Bibliotheken. |
+|**FACHBEREICHS SPEZIFIKATIONEN**|   |   |  |
+|**Ersatz für Whatsapp**|Grundsätzlich Ja, nach Weiterentwicklung der GUI des Klienten|Ja im privaten Bereich, aber ggf. differierende Architektur.| Ja im privaten Bereich, aber ggf. differierende Architektur.|
+|**Versand von Bildern**|ja.|Ja.   | Derzeit in Implementierung |
 |**Übermittlung Text-Nachrichten**|Ja.   |Ja.   | 
-|**Erstellung von Gruppenchats**|Ja, mehrere Methoden. |Ja, an mehrere Teilnehmer.| 
+|**Erstellung von Gruppenchats**|Ja, mehrere Methoden. |Ja, an mehrere Teilnehmer.| |Ja, an mehrere Teilnehmer.|
 
 
 Aufgrund dieser Analyse und einer Einschätzung pro Zeile ergibt sich auch aus einer Gewichtung der Einzel-Kriterien aus der hier vorliegenden Sicht, dass Smoke die besseren technischen Ausstattungen, geringeren Kosten und umfangreichere Erweiterungsmöglichkeiten für kommunale Zwecke bietet, auch wenn für die Benutzeroberfläche ein Re-Design erforderlich ist.
-Die etwas elaboriertere Benutzeroberfläche von Delta rechtfertigt nicht die technischen Nachteile und vagen Implementierungsrisiken wie doppelte Emailadressen, Zeit-Delays bei Zustellung von Nachrichten, Notwendigkeit der Exklusion von anderen IMAP-Servern im kommunalen Geschäftsprozess oder der Notwendigkeit, einen Schlüssel-Server noch programmieren zu müssen, der in der Serversoftware SmokeStack des Servers von Smoke Chat bereits zu Verfügung steht.
+Die etwas elaboriertere Benutzeroberfläche von diesem Messenger rechtfertigt nicht die technischen Nachteile und vagen Implementierungsrisiken wie doppelte Emailadressen, Zeit-Delays bei Zustellung von Nachrichten, Notwendigkeit der Exklusion von anderen IMAP-Servern im kommunalen Geschäftsprozess oder der Notwendigkeit, einen Schlüssel-Server noch programmieren zu müssen, der in der Serversoftware SmokeStack des Servers von Smoke Chat bereits zu Verfügung steht.
 Die Entwicklung der Benutzeroberfläche von Smoke ist daher im notwendigen Branding der Applikation für eine Kommunalverwaltung in einem Schritt mit Leichtigkeit und wenigen entsprechenden Java-Programmierern zu erreichen.
 Die Portierung auf Apples IOS Betriebssystem ist bei beiden Varianten erforderlich.
 
@@ -368,6 +382,13 @@ Die Portierung auf Apples IOS Betriebssystem ist bei beiden Varianten erforderli
 |---|---|---|
 |**SMOKE Code**| * Schlüssel-Server in der Code Basis vorhanden. <br> * Technisch ausgereift mit vielen Optionen und umfangreichen Schnittstellen zu Erweiterungsfunktionen. <br> * SmokeStack Serversoftwar einfach zu administrieren. <br> * Serversoftware und Code Basis für Java und C++ vorhanden. <br> * Serversoftware läuft auf allen POSIX Maschinen und auch unter Android Betriebssystem. <br> * Einsatz auf multiplen Geräten möglich. <br> * Code Basis vorhanden für den Chat von mobilen Geräten (Java) auch zu Desktop Klienten (C++). <br> * Geringe Abhängigkeiten in der Codebasis. <br> | * Benutzeroberfläche benötigt leichte Anpassungen für Android. <br> * Portierung nach Apples iOS als nächster Schritt erforderlich. <br>  |
 |**DELTA Code**| *Ansprechende Benutzeroberfläche  | * Portierung nach Apples iOS als nächster Schritt erforderlich. <br> * IMAP Server könnte Gebühren verursachen. <br> * Kein einfaches Server-Setup für weitere Zielgruppen wie Schulen. <br> * Schlüssel-Server müsste extra programmiert werden. <br> * IMAP Protokoll nicht ideal für Messaging ohne Delay-Wunsch. <br> * Risiko der Doppelten Mailadressen und Nutzung privater Emailadressen (= selbe Konfliktsituation wie bei WhatsApp). <br> * GPG erlaubt keine Chat Verbindung zu einem Desktopklienten mangels Code-Basis. <br> * Zahlreiche Abhängigkeiten in der Codebass zu Bibliotheken und GPG Grundlagen, Core für den Mail-Kern der App. <br> |
+
+
+Im Vergleich von Lettera und Delta lässt sich festhalten, dass die Code-Basis von Lettera schlanker und eleganter programmiert ist, weil sie auch nicht so viele Bibliotheken sowie Mix von c++ und Java verbindet wie Delta.
+
+Lettera ist ein Java Client, der auf die Java-Email-Bibliothek von Oracle setzt und daher einfach zu kompilieren ist. Delta hat einen c++ Kernel bzw eine c++ Bibliothek darin, die an Java angebunden wird. Kernel und Gui sind daher getrennt, auch c++ muss an Java angebunden werden.
+
+Eine durchgängige Programmierung in Java wie in Lettera ist daher als eleganter zu bewerten für Entwickler, die auf diesem Projekt aufsetzen und es für eigene Zwecke weiter entwickeln wollen.
 
 
 Zusammenfassend soll daher Smoke Chat als Applikation zur Implementierung
@@ -635,4 +656,5 @@ SVZ: Mangelnde Aufklärung : Lehrer sollten Whatsapp und Co. nicht für Klassenc
 Tung, Liam: WhatsApp is the most blacklisted app on BYOD iPhones in the enterprise, URL: https://www.cso.com.au/article/628110/whatsapp-most-blacklisted-app-byod-iphones-enterprise/, 04.10.2017
 
 Wikipedia: Datenschutzgrundverordnung (DSGVO), URL: https://de.wikipedia.org/wiki/Datenschutz-Grundverordnung, 17.04.2018
+
 
