@@ -342,9 +342,8 @@ Anhand der aufgestellten Kriterien sollen beide Applikationen und Server nun ein
 
 
 
-| KRITERIUM  |  SMOKE CHAT |  DELTA CHAT  | Lettera Chat  |   
-|---|---|---|
-|**TECHNISCHE SPEZIFIKATIONEN**|   |   |  
+| KRITERIUM  |  SMOKE CHAT |  DELTA CHAT  | LETTERA CHAT  |
+|---|---|---|---|
 |**Einfache Administration Server**| Sehr einfache Serveradministration, z.B. mit Serversoftware SmokeStack oder Spot-on. Serversoftware liegt für zahlreiche Betriebssysteme vor wie auch in Java und C++. Die Serveradministration erfolgt sehr einfach mit wenigen Klicks über die Einrichtung eines HTTPS Listeners. | Nutzung von IMAP Servern. Damit werden Email-Server für Chat umfunktioniert, d.h. es gibt auch ggf. Verzögerungen in der Zustellung. Es muss ausgeschlossen werden, dass die Nutzer andere IMAP Server als den für die jeweilige Kommune bzw. Schule und dieses Programm dediziert nutzen. Dieses wäre faktisch unmöglich, und E-MailAdressen könnten verwechselt werden. Die IMAP Serveradministration ist nur etwas für Experten.| Bei Letttera ebenso Einsatz von IMAPS Server, die mit ihren Einstellungen einfach getestet werden können.  |
 |**Quelloffener Servercode**|Ja, BSD license. Kostenfreie Serversoftware in der Architektur vorhanden.|Lizenz in Hand Dritter, den Anbietern des IMAP Servers. Lizenzkosten für das Aufsetzen ggf. eines Exchange Servers. Es entstehen Kosten. Open-Xchange, Scalix, Zimbra und Zarafa als Exchange-Ersatz nicht erprobt im einfachen Einsatz und im Zusammenspiel mit Delta.| Lettera ist quelloffen und hat geringe Abhängigkeiten von externen Bibliotheken.|
 |**Ohne DHT**| Ohne DHT|Ohne DHT| Ohne DHT|
@@ -367,7 +366,7 @@ Anhand der aufgestellten Kriterien sollen beide Applikationen und Server nun ein
 |**FACHBEREICHS SPEZIFIKATIONEN**|   |   |  |
 |**Ersatz für Whatsapp**|Grundsätzlich Ja, nach Weiterentwicklung der GUI des Klienten|Ja im privaten Bereich, aber ggf. differierende Architektur.| Ja im privaten Bereich, aber ggf. differierende Architektur.|
 |**Versand von Bildern**|ja.|Ja.   | Derzeit in Implementierung |
-|**Übermittlung Text-Nachrichten**|Ja.   |Ja.   | 
+|**Übermittlung Text-Nachrichten**|Ja.   |Ja.   | Ja. |
 |**Erstellung von Gruppenchats**|Ja, mehrere Methoden. |Ja, an mehrere Teilnehmer.| |Ja, an mehrere Teilnehmer.|
 
 
