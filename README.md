@@ -634,6 +634,8 @@ DSGVOAPP: Whatsapp & DSGVO – Kann das zusammenpassen?, https://www.dsgvoapp.at
 
 Frankfurter Rundschau: Recht auf Unerreichbarkeit im Job E-Mail-Sperre nach Feierabend, URL: http://www.fr.de/wirtschaft/arbeit-soziales/recht-auf-unerreichbarkeit-im-job-e-mail-sperre-nach-feierabend-a-612421, 18,02,2014
 
+Gasakis, Mele / Schmidt, Max: Beyond Cryptographic Routing: The Echo Protocol in the new Era of Exponential Encryption (EEE) - A comprehensive essay about the Sprinkling Effect of Cryptographic Echo Discovery (SECRED) and further innovations in cryptography around the Echo Applications Smoke, SmokeStack, Spot-On, Lettera and GoldBug Crypto Chat Messenger addressing Encryption, Graph-Theory, Routing and the change from Mix-Networks like Tor or I2P to Peer-to-Peer-Flooding-Networks like the Echo respective to Friend-to-Friend Trust-Networks like they are built over the POPTASTIC protocol, ISBN 978-3-7481-5198-2, 2018.
+
 Handelskammer Hamburg: Steuer- und Handelsrecht: Aufbewahrungsfristen von Geschäftsunterlagen, URL: https://www.hk24.de/produktmarken/beratung-service/recht_und_steuern/steuerrecht/abgabenrecht/aufbewahrungsfristen-geschaeftsunterlagen/1157174, 17,04.2018
 
 Iseninfos: DGSVO: WhatsApp auf Firmenhandy nicht mehr erlaubt, URL: http://www.iseninfos.de/mitarbeiter-unternehmen-whatsapp-firmenhandy/, 27.01.2018
